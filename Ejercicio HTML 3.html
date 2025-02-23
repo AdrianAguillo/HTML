@@ -11,29 +11,40 @@
     <form>
         <fieldset>
             <legend>Datos del usuario</legend>
-            <p>Nombre <input type="text"></p>
-            <p>Eres socio?</p>
-            <p><input type="radio" name="socio" value="Si">Sí, soy socio</p>
-            <p><input type="radio" name="socio" value="No">No soy socio</p>
-            <p>Email <input type="text"></p>
-            <p>Contraseña <input type="text"></p>
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre">
+            <br><br>
+            <label>Eres socio?</label>
+            <input type="radio" id="socio_si" name="socio" value="Si">
+            <label for="socio_si">Sí, soy socio</label>
+            <input type="radio" id="socio_no" name="socio" value="No">
+            <label for="socio_no">No soy socio</label>
+            <br><br>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email">
+            <br><br>
+            <label for="password">Contraseña</label>
+            <input type="password" id="password" name="password">
         </fieldset>
         <fieldset>
             <legend>Datos de la reserva</legend>
-            <p>Edad 
-                <select>
-                    <option value="mayor">Mayor de 18</option>
-                    <option value="menor">Menor de 18</option>
-                </select>
-            </p>
-            <p>Selecciona la fecha y hora de reserva:</p>
-            <input type="date" placeholder="dd/mm/aaaa"> 
-            <input type="time" placeholder="-- : --">
+            <label for="edad">Edad</label>
+            <select>
+                <option value="mayor">Mayor de 18</option>
+                <option value="menor">Menor de 18</option>
+            </select>
             <br><br>
-            <textarea rows="4" cols="50" placeholder="Comentarios"></textarea>
+            <label for="fecha">Selecciona la fecha y hora de reserva:</label>
+            <input type="date" id="fecha" name="fecha" placeholder="dd/mm/aaaa"> 
+            <input type="time" id="hora" name="hora" placeholder="-- : --">
+            <br><br>
+            <label for="comentarios"></label>
+            <textarea id="comentarios" name="comentarios" rows="4" cols="50" placeholder="Comentarios"></textarea>
         </fieldset>
-        <p><input type="checkbox" name="condiciones" value="1" required>Acepto las condiciones</p>
-        <input type="submit" placeholder="ENVIAR">
+        <input type="checkbox" id="condiciones" name="condiciones" value="1" required>
+        <label for="condiciones">Acepto las condiciones</label>
+        <br><br>
+        <button type="submit">ENVIAR</button>
     </form>
 </body>
 </html>
